@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="pluto.baseball.model.applicationModule.BaseballAM">
+      <AppModuleConfig name="BaseballAMLocal" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" ApplicationName="pluto.baseball.model.applicationModule.BaseballAM" jbo.project="pluto.baseball.model.Model">
+         <Database jbo.locking.mode="optimistic" JDBCDataSource="java:comp/env/jdbc/baseball_oracle8DS" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="pluto.baseball.model.applicationModule.BaseballAM"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="BaseballAMShared" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" ApplicationName="pluto.baseball.model.applicationModule.BaseballAM" jbo.project="pluto.baseball.model.Model">
+         <AM-Pooling jbo.ampool.isuseexclusive="false" jbo.ampool.maxpoolsize="1"/>
+         <Database jbo.locking.mode="optimistic" JDBCDataSource="java:comp/env/jdbc/baseball_oracle8DS" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="pluto.baseball.model.applicationModule.BaseballAM"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

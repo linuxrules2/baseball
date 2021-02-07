@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48"
+                id="BaseballAM_MlbTeamProfilesVOResources" Package="pluto.baseball.model.applicationModule.rest.v10"
+                usageMode="RESTClient">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="MlbTeams" RangeSize="25" DataControl="BaseballAMDataControl" id="MlbTeamsIter"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="MlbTeamsIter" id="mlb" AccessorFolder="Always">
+      <ServiceConfiguration EnableRowContextLOV="false"/>
+      <nodeDefinition DefName="pluto.baseball.model.view.MlbTeamProfilesVO"
+                      Name="pluto.baseball.model.view.MlbTeamProfilesVO">
+        <Accessors>
+          <Item Value="CurrentPlayers"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="pluto.baseball.model.view.MlbPlayerProfilesVO"
+                      Name="pluto.baseball.model.view.MlbPlayerProfilesVO" DiscrName="_Sys_Accessor"
+                      DiscrValue="CurrentPlayers"/>
+    </tree>
+  </bindings>
+</pageDefinition>

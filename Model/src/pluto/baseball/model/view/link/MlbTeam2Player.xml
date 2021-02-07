@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="MlbTeam2Player"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  EntityAssociation="pluto.baseball.model.entity.assoc.MlbTeam2Player">
+  <ViewLinkDefEnd
+    Name="MlbTeamProfiles"
+    Cardinality="1"
+    Source="true"
+    Owner="pluto.baseball.model.view.MlbTeamProfilesVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="MlbTeamProfiles"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pluto.baseball.model.view.MlbTeamProfilesVO.TeamProfileId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="CurrentPlayers"
+    Cardinality="-1"
+    Owner="pluto.baseball.model.view.MlbPlayerProfilesVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="CurrentPlayers"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pluto.baseball.model.view.MlbPlayerProfilesVO.CurrentTeamId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

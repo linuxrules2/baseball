@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="BaseballAM"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="MlbTeams"
+    ViewObjectName="pluto.baseball.model.view.MlbTeamProfilesVO"/>
+  <ViewUsage
+    Name="MlbTeamPlayers"
+    ViewObjectName="pluto.baseball.model.view.MlbPlayerProfilesVO"/>
+  <ViewLinkUsage
+    Name="MlbTeam2Player"
+    ViewLinkObjectName="pluto.baseball.model.view.link.MlbTeam2Player"
+    SrcViewUsageName="pluto.baseball.model.applicationModule.BaseballAM.MlbTeams"
+    DstViewUsageName="pluto.baseball.model.applicationModule.BaseballAM.MlbTeamPlayers"
+    Reversed="false"/>
+</AppModule>

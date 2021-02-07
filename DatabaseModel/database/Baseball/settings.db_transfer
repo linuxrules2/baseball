@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TransferDescriptor xmlns="http://xmlns.oracle.com/jdeveloper/110000transfer-descriptor">
+   <value n="cascadeDelete" v="false"/>
+   <value n="compare" v="true"/>
+   <value n="dependencyDepth" v="0"/>
+   <value n="includeAllDependencies" v="true"/>
+   <value n="includeDependencies" v="true"/>
+   <value n="policy" v="oracle.jdevimpl.offlinedb.transfer.OffToOnPolicy"/>
+   <list n="schemaObjectDescriptors">
+      <hash>
+         <value n="name" v="MLB_PK_SEQ"/>
+         <value n="schemaName" v="BASEBALL"/>
+         <value n="type" v="SEQUENCE"/>
+      </hash>
+      <hash>
+         <value n="name" v="MLB_PLAYER_PROFILES"/>
+         <value n="schemaName" v="BASEBALL"/>
+         <value n="type" v="TABLE"/>
+      </hash>
+      <hash>
+         <value n="name" v="MLB_TEAM_PROFILES"/>
+         <value n="schemaName" v="BASEBALL"/>
+         <value n="type" v="TABLE"/>
+      </hash>
+   </list>
+   <url n="sourceIdentifier" path="Baseball.offlinedb"/>
+   <value n="sourceProviderType" v="offlinedb"/>
+   <value n="targetIdentifier" v="%40Users%40pluto%40MyDevWork%40jdeveloper%40DBBaseball%40DBBaseball.jws%23baseball_oracle8"/>
+   <value n="targetProviderType" v="db"/>
+   <hash n="targets">
+      <hash n="oracle.ideimpl.db.transfer.DatabaseProviderTransferTarget"/>
+   </hash>
+   <value n="targetSchemaName" v="BASEBALL_DBA"/>
+   <value n="targetTableSpace" v="USERS"/>
+   <value n="TransferOperation.AlterWithReplace" v="true"/>
+   <value n="TransferOperation.CreateReplaceAlter" v="ALTER"/>
+</TransferDescriptor>

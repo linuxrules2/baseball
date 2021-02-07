@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.22.48" id="ResourceRegistry"
+             SeparateXMLFiles="false" Package="pluto.baseball.model" ClientType="Generic">
+  <pageMap>
+    <page path="v10_mlb" usageId="v10_BaseballAM_MlbTeamProfilesVOResources"/>
+  </pageMap>
+  <dataControlUsages>
+    <BC4JDataControl id="BaseballAMDataControl" Package="pluto.baseball.model.applicationModule"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="BaseballAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+  <pageDefinitionUsages>
+    <page id="v10_BaseballAM_MlbTeamProfilesVOResources"
+          path="pluto.baseball.model.applicationModule.rest.v10.BaseballAM_MlbTeamProfilesVOResources"/>
+  </pageDefinitionUsages>
+</Application>
